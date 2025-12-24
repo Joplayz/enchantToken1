@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DED",
+    "EGE",
+    "DED"
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "E": "minecraft:emerald",
+    "G": "minecraft:gold_ingot"
+  },
+  "result": {
+    "id": "enchanttoken:god_gem",
+    "count": 1
+  }
+}

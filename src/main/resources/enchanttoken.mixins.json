@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.joplayx.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EnchantmentNameMixin",
+    "ItemEnchantmentsLevelCapMixin",
+    "ItemEnchantmentsMixin",
+    "ItemEnchantmentsMutableMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

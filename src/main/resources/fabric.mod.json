@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "enchanttoken",
+  "version": "1.1.0",
+  "name": "Enchant Token",
+  "description": "Apply any enchantment at any level with Enchant Tokens! Bypass vanilla limits and enchant items up to level 2,147,483,647. Includes God Sword and God Gem items.",
+  "authors": ["Joplayx"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/enchanttoken/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.joplayx.EnchantToken"
+    ],
+    "client": [
+      "com.joplayx.client.EnchantTokenClient"
+    ]
+  },
+  "mixins": [
+    "enchanttoken.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DLN",
+    "LEL",
+    "NLD"
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "L": "minecraft:lapis_lazuli",
+    "E": "minecraft:enchanting_table",
+    "N": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "id": "enchanttoken:enchant_token",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "enchanttoken:item/enchant_token"
+  }
+}
