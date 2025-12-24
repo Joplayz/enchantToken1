@@ -8,21 +8,33 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
 import java.util.function.Function;
 
 public class ModItems {
 
-    // Base UUIDs that Minecraft uses - these show as green base values, not blue modifiers
     private static final ResourceLocation BASE_ATTACK_DAMAGE_ID = ResourceLocation.withDefaultNamespace("base_attack_damage");
     private static final ResourceLocation BASE_ATTACK_SPEED_ID = ResourceLocation.withDefaultNamespace("base_attack_speed");
+
+    // God tool material - instant mining speed (10000), high durability
+    public static final ToolMaterial GOD_TOOL_MATERIAL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            10000,
+            10000.0F,
+            0.0F,
+            30,
+            null
+    );
 
     public static final Item ENCHANT_TOKEN = register(
             "enchant_token",
@@ -59,6 +71,53 @@ public class ModItems {
                             .build())
     );
 
+    public static final Item GOD_AXE = register(
+            "god_axe",
+            Item::new,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .axe(GOD_TOOL_MATERIAL, 100.0f, -3.0f)
+    );
+
+    public static final Item GOD_PICKAXE = register(
+            "god_pickaxe",
+            Item::new,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .pickaxe(GOD_TOOL_MATERIAL, 1.0f, -2.8f)
+    );
+
+    public static final Item GOD_SHOVEL = register(
+            "god_shovel",
+            Item::new,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .shovel(GOD_TOOL_MATERIAL, 1.0f, -3.0f)
+    );
+
+    public static final Item GODLY_SWORD = register(
+            "godly_sword",
+            GodSwordItem::new,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(ItemAttributeModifiers.builder()
+                            .add(Attributes.ATTACK_DAMAGE,
+                                    new AttributeModifier(
+                                            BASE_ATTACK_DAMAGE_ID,
+                                            999,
+                                            AttributeModifier.Operation.ADD_VALUE
+                                    ),
+                                    EquipmentSlotGroup.MAINHAND)
+                            .add(Attributes.ATTACK_SPEED,
+                                    new AttributeModifier(
+                                            BASE_ATTACK_SPEED_ID,
+                                            -2.4,
+                                            AttributeModifier.Operation.ADD_VALUE
+                                    ),
+                                    EquipmentSlotGroup.MAINHAND)
+                            .build())
+    );
+
     public static final CreativeModeTab MOD_TAB = Registry.register(
             BuiltInRegistries.CREATIVE_MODE_TAB,
             ResourceLocation.fromNamespaceAndPath(EnchantToken.MOD_ID, "mod_tab"),
@@ -69,6 +128,10 @@ public class ModItems {
                         entries.accept(ENCHANT_TOKEN);
                         entries.accept(GOD_GEM);
                         entries.accept(GOD_SWORD);
+                        entries.accept(GOD_AXE);
+                        entries.accept(GOD_PICKAXE);
+                        entries.accept(GOD_SHOVEL);
+                        entries.accept(GODLY_SWORD);
                     })
                     .build()
     );

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    " G ",
+    " S "
+  ],
+  "key": {
+    "G": "enchanttoken:god_gem",
+    "S": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "enchanttoken:godly_sword",
+    "count": 1
+  }
+}

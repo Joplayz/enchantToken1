@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "G",
+    "S",
+    "S"
+  ],
+  "key": {
+    "G": "enchanttoken:god_gem",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "enchanttoken:god_shovel",
+    "count": 1
+  }
+}

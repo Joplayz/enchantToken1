@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "G": "enchanttoken:god_gem",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "enchanttoken:god_pickaxe",
+    "count": 1
+  }
+}

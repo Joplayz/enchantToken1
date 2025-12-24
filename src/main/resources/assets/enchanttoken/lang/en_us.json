@@ -2,6 +2,10 @@
   "item.enchanttoken.enchant_token": "Enchant Token",
   "item.enchanttoken.god_gem": "God Gem",
   "item.enchanttoken.god_sword": "God Sword",
+  "item.enchanttoken.god_axe": "God Axe",
+  "item.enchanttoken.god_pickaxe": "God Pickaxe",
+  "item.enchanttoken.god_shovel": "God Shovel",
+  "item.enchanttoken.godly_sword": "Godly Sword",
   "key.enchanttoken.open_enchant": "Open Enchant Menu",
   "category.enchanttoken.main": "Enchant Token",
   "itemGroup.enchanttoken.mod_tab": "Enchant Token"
