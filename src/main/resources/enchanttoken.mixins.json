@@ -3,6 +3,8 @@
   "package": "com.joplayx.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BedrockBreakMixin",
+    "BedrockDropMixin",
     "EnchantmentNameMixin",
     "ItemEnchantmentsLevelCapMixin",
     "ItemEnchantmentsMixin",
